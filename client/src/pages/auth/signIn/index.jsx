@@ -10,6 +10,7 @@ import {
   signInStart,
   signInSuccess,
 } from "../../../redux/user/userSlice";
+import CustomTypewriter from "../utils/customTypewriter";
 
 export default function SignIn() {
   const dispatch = useDispatch();
@@ -77,7 +78,7 @@ export default function SignIn() {
   return (
     <div className="w-screen h-screen flex items-center justify-center bg-[#c2c2c2] ">
       <div className="w-full h-full md:w-[90%] md:h-[95%] bg-white flex items-center justify-center md:flex-row flex-col ">
-        <div className="bg-black md:h-full h-[40%] w-full md:w-2/4 lg:w-3/5 testipmg "></div>
+        <CustomTypewriter />
         <div className=" h-full md:w-2/4 lg:w-2/5 w-full flex justify-center items-center  ">
           <div className="h-full w-full flex items-center justify-center flex-col p-5 ">
             <h2 className="md:text-2xl text-3xl font-semibold text-center">
@@ -133,7 +134,10 @@ export default function SignIn() {
                 )}
               </div>
 
-              <Link className=" text-base md:text-xs font-medium text-gray-700 flex self-end">
+              <Link
+                className=" text-base md:text-xs font-medium text-gray-700 flex self-end"
+                to={"/forgot-password"}
+              >
                 Forgot Password
               </Link>
 

@@ -5,7 +5,8 @@ import SignUp from "./pages/auth/signUp";
 import Home from "./pages/home";
 import ProtectLogin from "./components/privateRoutes/protectLogin";
 import PrivateRoute from "./components/privateRoutes";
-import Navbar from "./components/navbar";
+import ForgotPassword from "./pages/auth/fogotPassword/forgotPassword";
+import ResetPassword from "./pages/auth/fogotPassword/resetPassword";
 
 function App() {
   return (
@@ -14,21 +15,12 @@ function App() {
         <Route element={<ProtectLogin />}>
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
         </Route>
 
         <Route element={<PrivateRoute />}>
-          {/* <Navbar /> */}
-          {/* <Route path="/nav" element={<Navbar />} />
-          <Route path="/" element={<Home />} /> */}
-          <Route
-            path="/"
-            element={
-              <>
-                <Navbar /> {/* Navbar is only displayed in private routes */}
-                <Home />
-              </>
-            }
-          />
+          <Route path="/" element={<Home />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -10,6 +10,7 @@ import {
   signUpStart,
   signUpSuccess,
 } from "../../../redux/user/userSlice";
+import CustomTypewriter from "../utils/customTypewriter";
 
 export default function SignUp() {
   const dispatch = useDispatch();
@@ -121,7 +122,8 @@ export default function SignUp() {
   return (
     <div className="w-screen h-screen flex items-center justify-center bg-[#c2c2c2] ">
       <div className="lg:w-[90%] lg:h-[95%] w-full h-full bg-white flex items-center justify-center md:flex-row flex-col ">
-        {/* <div className="bg-black md:h-full h-[50%] w-full md:w-2/4 lg:w-3/5 testipmg "></div> */}
+        <CustomTypewriter />
+
         <div className=" h-full lg:w-2/5 md:w-2/4 w-full flex justify-center items-center  ">
           <div className="h-full w-full flex items-center justify-center flex-col p-5 ">
             <h2 className="md:text-2xl text-3xl font-semibold text-center">
@@ -257,7 +259,6 @@ export default function SignUp() {
             </div>
           </div>
         </div>
-        <div className="bg-black md:h-full h-[50%] w-full md:w-2/4 lg:w-3/5 testipmg "></div>
       </div>
     </div>
   );

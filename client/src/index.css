@@ -6,6 +6,9 @@
 body {
   font-family: "Outfit", serif;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 
 /* .testipmg {
   background: url("C:\Users\USER\Desktop\taskProject\client\src\assets\AddTask.png")
